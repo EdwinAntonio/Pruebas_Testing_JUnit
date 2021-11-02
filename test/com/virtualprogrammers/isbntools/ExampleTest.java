@@ -22,6 +22,12 @@ public class ExampleTest {
         assertFalse(new ValidateISBN().checkAValidateISBN("0140449117"));
     }
 
+    @Test
+    public void checkAValidate13ISBNTest(){
+        assertTrue("First Value 13: ",new ValidateISBN().checkAValidateISBN("9781853267338"));
+    }
+
+
     @Test(expected = NumberFormatException.class)
     public void nineNumbersISBNAreNotAllowed(){
         new ValidateISBN().checkAValidateISBN("123456789");
